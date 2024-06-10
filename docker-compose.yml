@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:13
+    env_file:
+      - .env
+    volumes:
+      - ./server/db/init.sh:/docker-entrypoint-initdb.d/init.sh
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - webnet
+
+  web:
+    build: .
+    command: uvicorn server.app.main:app --host ${APP_HOST} --port ${APP_PORT} --reload
+    volumes:
+      - .:/server
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    networks:
+      - webnet
+    env_file:
+      - .env
+
+networks:
+  webnet:
+
+volumes:
+  postgres_data:
