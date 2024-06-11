@@ -199,6 +199,7 @@ PostgreSQL is used due to its robustness, scalability, and support for advanced 
 ## Next Steps if there were more time
 
 - **Testing**: Write unit and integration tests.
+- **Migrations**: Add Alembic migrations to manage db changes
 - **Error Handling**: Write classes for common errors and improve API responses.
 - **Authorization**: Add permission levels to protect apis like "customers".
 - **Logging**: Implement logging.
