@@ -1,4 +1,4 @@
-# OpplyTask README
+# Opply README
 
 ## Overview
 
@@ -13,8 +13,8 @@ This project is a FastAPI application for managing customers, products, and orde
 
 1. **Clone the repository**:
     ```
-    git clone https://github.com/your-repo/OpplyTask.git
-    cd OpplyTask
+    git clone git@github.com:mikeya0keeffe/Opply.git
+    cd Opply
     ```
 
 2. **Set up environment variables**:
